@@ -1,0 +1,19 @@
+### Notes
+#
+# Eventually the static HTML will be generated with Go I wrote to build static sites with MarkDown templates
+
+1. need Terraform to create the infra for the site.
+  - Create s3 bucket
+  - Set the S3 bucket’s ACL, policy, and static website hosting configurations
+  - Create ACM ssl cert
+  - Create a Cloudfront distribution with origin set to the above-created bucket
+  - Set up various Cloudfront configurations like cache/restrictions etc.
+  - Update the S3 bucket policy to have access via the above created Cloudfront distribution
+  - create pipeline that will be used to upload site files to s3 bucket
+2. Pipeline steps
+  - webhook for repo
+  - step one lint files
+  - copy files into bucket
+
+
+
