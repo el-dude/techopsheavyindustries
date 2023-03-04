@@ -8,5 +8,13 @@ This repo contains the static HTML files for techopsheavyindustries.com and Terr
 - S3
 - Route53
 
-
+ ## deploy steps
+```
+git clone git@github.com:el-dude/techopsheavyindustries.git
+cd techopsheavyindustries/terraform/techopsheavyindustries
+terraform init
+terraform plan
+terraform apply
+echo "Profit..."
+```
 
